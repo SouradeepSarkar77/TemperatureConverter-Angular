@@ -1,0 +1,24 @@
+<div class="body">
+  <mat-card class="example-card">
+    <mat-card-title-group>
+      <mat-card-title>Temperature Converter</mat-card-title>
+    </mat-card-title-group>
+    <mat-card-content>
+      <div class="textbox">
+        <input type="number" placeholder="Enter the Temperature" #temp>
+      </div>
+        <mat-form-field appearance="fill" class="form">
+            <mat-label>Select</mat-label>
+              <mat-select [(value)]="selected">
+              <mat-option value="Farenheit">Farenheit</mat-option>
+              <mat-option value="Kelvin">Kelvin</mat-option>
+              </mat-select>
+        </mat-form-field>
+        <br /><br /><br /> 
+        <div>
+          <button (click)="convert(temp.value)">Convert</button>
+          <h1>In Celsius : {{result}}</h1>
+        </div>
+    </mat-card-content>
+  </mat-card>
+</div>
